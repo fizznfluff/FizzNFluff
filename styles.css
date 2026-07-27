@@ -229,3 +229,150 @@ footer p { color: var(--muted); }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* ===== Version 1.2 motion and brand effects ===== */
+body.cursor-ready,
+body.cursor-ready a,
+body.cursor-ready button {
+  cursor: none;
+}
+
+.custom-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--brown);
+  border-radius: 50%;
+  background: rgba(255, 173, 10, 0.88);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%) scale(0);
+  transition: width .16s ease, height .16s ease, background .16s ease, transform .16s ease;
+  box-shadow: inset 5px 5px 0 rgba(255,255,255,.38), 3px 4px 0 rgba(44,23,13,.18);
+}
+.custom-cursor::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  left: 5px;
+  top: 4px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.82);
+}
+.custom-cursor.visible { transform: translate(-50%, -50%) scale(1); }
+.custom-cursor.hovering {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 243, 214, .92);
+}
+.custom-cursor span {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%) scale(0);
+  font-size: 18px;
+  transition: transform .16s ease;
+}
+.custom-cursor.hovering span { transform: translate(-50%, -50%) scale(1); }
+
+.bubble-field {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+.float-bubble {
+  position: absolute;
+  bottom: -90px;
+  border-radius: 50%;
+  border: 2px solid rgba(44, 23, 13, .24);
+  background: radial-gradient(circle at 30% 25%, rgba(255,255,255,.92) 0 12%, rgba(255,255,255,.28) 16% 48%, rgba(255,173,10,.12) 70%);
+  opacity: 0;
+  animation: bubbleRise linear infinite;
+}
+@keyframes bubbleRise {
+  0% { transform: translate3d(0, 0, 0) scale(.72); opacity: 0; }
+  10% { opacity: .42; }
+  60% { transform: translate3d(28px, -62vh, 0) scale(1); }
+  100% { transform: translate3d(-18px, -120vh, 0) scale(1.12); opacity: 0; }
+}
+
+.hero { overflow: hidden; }
+.foam-drip {
+  position: absolute;
+  inset: -2px 0 auto 0;
+  height: 42px;
+  background: #fff;
+  z-index: 1;
+  filter: drop-shadow(0 5px 0 rgba(44,23,13,.08));
+}
+.foam-drip span {
+  position: absolute;
+  top: 20px;
+  width: 54px;
+  height: 54px;
+  border-radius: 0 0 50% 50%;
+  background: #fff;
+  animation: foamBob 4.5s ease-in-out infinite;
+}
+.foam-drip span:nth-child(1) { left: 7%; height: 35px; width: 68px; animation-delay: -.4s; }
+.foam-drip span:nth-child(2) { left: 25%; height: 58px; width: 88px; animation-delay: -1.6s; }
+.foam-drip span:nth-child(3) { left: 49%; height: 42px; width: 62px; animation-delay: -2.5s; }
+.foam-drip span:nth-child(4) { left: 70%; height: 64px; width: 92px; animation-delay: -.9s; }
+.foam-drip span:nth-child(5) { right: 5%; height: 39px; width: 72px; animation-delay: -3.1s; }
+@keyframes foamBob {
+  0%, 100% { transform: translateY(0) scaleX(1); }
+  50% { transform: translateY(5px) scaleX(.96); }
+}
+
+.logo-pop {
+  animation: logoEntrance .9s cubic-bezier(.2,.9,.2,1.18) both, logoFloat 5s ease-in-out 1s infinite;
+  transform-origin: center;
+}
+@keyframes logoEntrance {
+  0% { opacity: 0; transform: rotate(-8deg) translateY(55px) scale(.72); }
+  70% { opacity: 1; transform: rotate(4deg) translateY(-8px) scale(1.04); }
+  100% { opacity: 1; transform: rotate(2deg) translateY(0) scale(1); }
+}
+@keyframes logoFloat {
+  0%, 100% { transform: rotate(2deg) translateY(0); }
+  50% { transform: rotate(.5deg) translateY(-10px); }
+}
+
+.button, .nav-button, .drink-card, .logo-card {
+  will-change: transform;
+}
+.button::after, .nav-button::after {
+  content: "✨";
+  display: inline-block;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin-left: 0;
+  transition: max-width .2s ease, opacity .2s ease, margin-left .2s ease;
+}
+.button:hover::after, .nav-button:hover::after {
+  max-width: 28px;
+  opacity: 1;
+  margin-left: .45rem;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .custom-cursor { display: none; }
+  body.cursor-ready, body.cursor-ready a, body.cursor-ready button { cursor: auto; }
+}
+
+@media (max-width: 700px) {
+  .foam-drip { height: 28px; }
+  .foam-drip span { top: 15px; transform: scale(.75); }
+  .float-bubble { opacity: .2; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bubble-field, .custom-cursor { display: none !important; }
+  .logo-pop { animation: none !important; }
+  .foam-drip span { animation: none !important; }
+}

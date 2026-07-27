@@ -1,24 +1,20 @@
-# Fizz & Fluff Website — Version 1.1
+# Fizz & Fluff Website — Version 1.2
 
-A responsive one-page website prepared for GitHub Pages.
+This GitHub Pages-ready version includes:
+
+- Updated Facebook link
+- Floating soda bubbles
+- Animated cold-foam drip across the hero
+- Animated logo entrance and gentle floating effect
+- Branded bubble cursor on desktop
+- Sparkle hover effects
+- Smooth scrolling and mobile-friendly navigation
+- Reduced-motion accessibility support
 
 ## Publish on GitHub Pages
 
-1. Create a new public GitHub repository, such as `fizz-and-fluff`.
-2. Upload every file and folder from this package to the repository.
-3. Open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select the `main` branch and `/ (root)`, then save.
-6. GitHub will provide the live website address after deployment.
-
-## Before publishing
-
-- Update event details once the first pop-up is scheduled.
-- Confirm menu recipes and prices before launch.
-
-## Included files
-
-- `index.html` — website content
-- `styles.css` — responsive design and branding
-- `script.js` — mobile menu and scroll animations
-- `assets/fizz-and-fluff-logo.png` — supplied logo
+1. Open the `FizzNFluff` repository.
+2. Upload `index.html`, `styles.css`, `script.js`, and the `assets` folder.
+3. Replace the old files when GitHub asks.
+4. Commit the changes.
+5. Wait about one minute, then refresh the live website.

@@ -1,4 +1,4 @@
-# Fizz & Fluff Website
+# Fizz & Fluff Website — Version 1.1
 
 A responsive one-page website prepared for GitHub Pages.
 
@@ -13,7 +13,6 @@ A responsive one-page website prepared for GitHub Pages.
 
 ## Before publishing
 
-- In `index.html`, replace the Facebook placeholder link (`href="#"`) with the real Facebook Page URL.
 - Update event details once the first pop-up is scheduled.
 - Confirm menu recipes and prices before launch.
 

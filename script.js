@@ -59,3 +59,23 @@ if (customCursor && finePointer && !reduceMotion) {
     target.addEventListener('mouseleave', () => customCursor.classList.remove('hovering'));
   });
 }
+
+
+// Version 1.3: occasional mascot sparkles
+const sparkleField = document.querySelector('.sparkle-field');
+if (sparkleField && !reduceMotion) {
+  const sparkleSymbols = ['✨', '⭐', '✦'];
+  const makeSparkle = () => {
+    const sparkle = document.createElement('span');
+    sparkle.className = 'mascot-sparkle';
+    sparkle.textContent = sparkleSymbols[Math.floor(Math.random() * sparkleSymbols.length)];
+    sparkle.style.left = `${8 + Math.random() * 84}%`;
+    sparkle.style.top = `${8 + Math.random() * 76}%`;
+    sparkleField.appendChild(sparkle);
+    sparkle.addEventListener('animationend', () => sparkle.remove());
+  };
+  setInterval(() => {
+    makeSparkle();
+    if (Math.random() > 0.55) setTimeout(makeSparkle, 180);
+  }, 2100);
+}

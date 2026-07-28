@@ -1,14 +1,15 @@
-# Fizz & Fluff Website — Version 1.2
+# Fizz N' Fluff Website — Version 1.3
 
-This GitHub Pages-ready version includes:
+This GitHub Pages-ready update includes:
 
-- Updated Facebook link
-- Floating soda bubbles
-- Animated cold-foam drip across the hero
-- Animated logo entrance and gentle floating effect
-- Branded bubble cursor on desktop
-- Sparkle hover effects
-- Smooth scrolling and mobile-friendly navigation
+- Renamed branding to Fizz N' Fluff
+- New mascot logo throughout the website
+- All menu prices removed
+- Updated gradient buttons
+- Mascot sparkle effects
+- Extra hero bubble motion
+- Improved drink-card hover tilt
+- Mobile layout polish
 - Reduced-motion accessibility support
 
 ## Publish on GitHub Pages

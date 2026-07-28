@@ -376,3 +376,92 @@ body.cursor-ready button {
   .logo-pop { animation: none !important; }
   .foam-drip span { animation: none !important; }
 }
+
+
+/* ===== Version 1.3 Fizz N' Fluff refresh ===== */
+.brand-mark {
+  overflow: hidden;
+  background: #fff;
+  padding: 2px;
+}
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.button-dark,
+.nav-button {
+  background: linear-gradient(135deg, var(--orange), var(--orange-deep));
+  color: var(--brown);
+}
+
+.logo-card {
+  max-width: 620px;
+  position: relative;
+}
+.logo-card img {
+  transform: scale(1.04);
+}
+
+.sparkle-field {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+.mascot-sparkle {
+  position: absolute;
+  font-size: clamp(1rem, 2vw, 1.8rem);
+  animation: sparklePop 1.4s ease-out forwards;
+}
+@keyframes sparklePop {
+  0% { opacity: 0; transform: scale(.3) rotate(-20deg); }
+  35% { opacity: 1; transform: scale(1.2) rotate(8deg); }
+  100% { opacity: 0; transform: scale(.75) translateY(-18px) rotate(20deg); }
+}
+
+.drink-card {
+  min-height: 260px;
+  transform-style: preserve-3d;
+}
+.drink-card:hover {
+  transform: perspective(700px) translateY(-8px) rotateX(2deg) rotateY(-2deg);
+}
+.drink-card p {
+  margin-bottom: 0;
+}
+
+.fluff-banner > .fluff-cloud {
+  font-size: 3rem;
+  animation: cloudBounce 2.6s ease-in-out infinite;
+}
+@keyframes cloudBounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-6px) scale(1.06); }
+}
+
+.hero .bubble-one,
+.hero .bubble-two {
+  animation: heroBubbleFloat 4.8s ease-in-out infinite;
+}
+.hero .bubble-two { animation-delay: -2.2s; }
+@keyframes heroBubbleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@media (max-width: 700px) {
+  .logo-card { max-width: 460px; }
+  .brand { gap: .5rem; }
+  .brand-mark { width: 38px; }
+  .drink-card { min-height: 230px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mascot-sparkle,
+  .fluff-banner > .fluff-cloud,
+  .hero .bubble-one,
+  .hero .bubble-two { animation: none !important; }
+}

@@ -1,36 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Fizz N' Fluff serves handcrafted dirty sodas, signature cold foam, pop-ups, and event service in the Mississippi Delta." />
-  <meta name="theme-color" content="#ffad0a" />
-  <meta property="og:title" content="Fizz N' Fluff | Dirty Soda Pop-Up" />
-  <meta property="og:description" content="Handcrafted dirty sodas, cold foam, pop-ups, and event bookings in the Mississippi Delta." />
-  <meta property="og:image" content="assets/fizz-n-fluff-logo.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fizz N' Fluff serves fun handcrafted dirty sodas and creamy specialty drinks in the Mississippi Delta.">
+  <meta name="theme-color" content="#ffad0a">
   <title>Fizz N' Fluff | Dirty Soda Pop-Up</title>
-  <link rel="icon" href="assets/fizz-n-fluff-logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/fizz-n-fluff-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="bubble-field" aria-hidden="true"></div>
-  <div class="announcement">🥤 Fizz N' Fluff is coming soon to the Mississippi Delta!</div>
+  <div class="announcement">🥤 Fizz N' Fluff is preparing for its first Mississippi Delta pop-up!</div>
 
   <header class="site-header" id="top">
     <a class="brand" href="#top" aria-label="Fizz N' Fluff home">
-      <img class="brand-logo" src="assets/fizz-n-fluff-logo.png" alt="" />
-      <span>Fizz N' Fluff</span>
+      <img src="assets/fizz-n-fluff-logo.svg" alt="Fizz N' Fluff logo">
     </a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
     <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-      <a href="#menu">Menu</a>
-      <a href="#about">About</a>
-      <a href="#popups">Pop-Ups</a>
-      <a href="#faq">FAQ</a>
-      <a class="nav-button" href="#book">Book Us</a>
+      <a href="#menu">Menu</a><a href="#meet-fluff">Meet Fluff</a><a href="#events">Events</a><a href="#about">About</a>
+      <a class="nav-button" href="#follow">Follow Us</a>
     </nav>
   </header>
 
@@ -38,132 +31,51 @@
     <section class="hero">
       <div class="foam-drip" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
       <div class="hero-copy reveal">
-        <p class="eyebrow">DIRTY SODAS • COLD FOAM • GOOD VIBES</p>
-        <h1>Get your fizz.<br /><span>Fluff it up.</span></h1>
-        <p class="hero-text">Handcrafted dirty sodas mixed with bold flavors, creamy add-ins, fresh citrus, and our signature cold foam.</p>
-        <div class="hero-actions">
-          <a class="button button-dark" href="#menu">See the Menu</a>
-          <a class="button button-orange" href="#book">Book an Event</a>
-        </div>
-        <div class="mini-badges">
-          <span>☁️ Signature Cold Foam</span>
-          <span>✨ Custom Flavors</span>
-          <span>🥤 Made to Order</span>
-        </div>
+        <p class="eyebrow">DIRTY SODAS • CREAMY MIX-INS • GOOD VIBES</p>
+        <h1>Big fizz.<br><span>Extra Fluff.</span></h1>
+        <p class="hero-text">Colorful, made-to-order specialty sodas bringing a little more fun to pop-ups, community gatherings, and private events across the Mississippi Delta.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#menu">Explore the Menu</a><a class="button button-light" href="#events">Book an Event</a></div>
+        <div class="mini-badges"><span>✨ Custom Flavors</span><span>🥤 Made to Order</span><span>🎉 Event Ready</span></div>
       </div>
       <div class="hero-art reveal">
-        <div class="speech-bubble" id="mascot-message">Try the Dr. Fluff! 🥤</div>
-        <div class="sparkle-field" aria-hidden="true"></div>
-        <button class="mascot-button" id="mascot-button" aria-label="Click the Fizz N' Fluff mascot">
-          <img src="assets/fizz-n-fluff-logo.png" alt="Fizz N' Fluff soda cup mascot" />
-        </button>
+        <div class="mascot-stage">
+          <span class="hello-bubble">Hey, I'm Fluff!</span>
+          <img src="assets/fluff-mascot.png" alt="Fluff, the Fizz N' Fluff soda cup mascot">
+        </div>
       </div>
     </section>
 
-    <section class="marquee" aria-label="Fizz N' Fluff highlights">
-      <div class="marquee-track"><span>FIZZ IT</span><i>★</i><span>FLUFF IT</span><i>★</i><span>SIP HAPPY</span><i>★</i><span>BOOK THE FUN</span><i>★</i><span>FIZZ IT</span><i>★</i><span>FLUFF IT</span></div>
-    </section>
+    <section class="marquee" aria-label="Fizz N' Fluff highlights"><div class="marquee-track"><span>FIZZ IT</span><i>★</i><span>FLUFF IT</span><i>★</i><span>SIP HAPPY</span><i>★</i><span>FIZZ IT</span><i>★</i><span>FLUFF IT</span><i>★</i><span>SIP HAPPY</span></div></section>
 
     <section class="section menu-section" id="menu">
-      <div class="section-intro with-mascot reveal">
-        <div>
-          <p class="eyebrow">OUR STARTER MENU</p>
-          <h2>Meet your next favorite sip.</h2>
-          <p>Our launch menu keeps things simple, fun, and full of flavor. Drink availability and recipes may change before opening.</p>
-        </div>
-        <img class="section-mascot tilt-left" src="assets/fizz-n-fluff-logo.png" alt="Fizz N' Fluff mascot pointing toward the menu" />
-      </div>
-
+      <img class="fluff-peek fluff-peek-right" src="assets/fluff-mascot.png" alt="" aria-hidden="true">
+      <div class="section-heading reveal"><p class="eyebrow">TEMPORARY LAUNCH MENU</p><h2>Meet your next favorite sip.</h2><p>Our starter menu keeps things simple, fun, and full of flavor. Exact offerings may change as we prepare for opening.</p></div>
       <div class="drink-grid">
-        <article class="drink-card featured reveal"><span class="drink-tag">SIGNATURE</span><div class="drink-icon">🥤</div><h3>Dr. Fluff</h3><p>Dr Pepper, coconut, vanilla cream, and a squeeze of fresh lime.</p><div class="badges"><span>⭐ Fan Favorite</span><span>🥥 Creamy</span></div></article>
-        <article class="drink-card reveal"><div class="drink-icon">🍒</div><h3>Cherry Bomb</h3><p>Dr Pepper, cherry flavor, vanilla cream, and a cherry on top.</p><div class="badges"><span>🍒 Fruity</span><span>☁️ Fluff It</span></div></article>
-        <article class="drink-card reveal"><div class="drink-icon">🍓</div><h3>Strawberry Dream</h3><p>Sprite, strawberry flavor, vanilla cream, and fresh strawberry.</p><div class="badges"><span>🍓 Sweet</span><span>✨ Bright</span></div></article>
-        <article class="drink-card reveal"><div class="drink-icon">🌊</div><h3>Blue Lagoon</h3><p>Sprite, blue raspberry, coconut, and sweet cream.</p><div class="badges"><span>🌊 Tropical</span><span>🥥 Coconut</span></div></article>
-        <article class="drink-card reveal"><div class="drink-icon">🥥</div><h3>Coconut Coke</h3><p>Coca-Cola, coconut, fresh lime, and sweet cream.</p><div class="badges"><span>🥥 Creamy</span><span>🍋 Lime</span></div></article>
-        <article class="drink-card reveal"><div class="drink-icon">🍺</div><h3>Root Beer Float</h3><p>Root beer, vanilla flavor, and a creamy finish—no ice cream needed.</p><div class="badges"><span>🤎 Classic</span><span>☁️ Smooth</span></div></article>
+        <article class="drink-card featured reveal"><span class="drink-tag">SIGNATURE</span><div class="drink-icon">🥤</div><h3>Dr. Fluff</h3><p>Dr Pepper, coconut, vanilla, cream, and a fresh squeeze of lime.</p></article>
+        <article class="drink-card reveal"><div class="drink-icon">🍒</div><h3>Cherry Bomb</h3><p>Dr Pepper, cherry, vanilla, cream, and a cherry on top.</p></article>
+        <article class="drink-card reveal"><div class="drink-icon">🍓</div><h3>Strawberry Dream</h3><p>Sprite, strawberry, vanilla, and a creamy finish.</p></article>
+        <article class="drink-card reveal"><div class="drink-icon">🌊</div><h3>Blue Lagoon</h3><p>Sprite, blue raspberry, coconut, and cream.</p></article>
+        <article class="drink-card reveal"><div class="drink-icon">🥥</div><h3>Coconut Coke</h3><p>Coca-Cola, coconut, lime, and cream.</p></article>
+        <article class="drink-card reveal"><div class="drink-icon">🍺</div><h3>Root Beer Float</h3><p>Root beer, vanilla, and a smooth creamy finish.</p></article>
       </div>
-
-      <div class="fluff-banner reveal">
-        <img src="assets/fizz-n-fluff-logo.png" alt="Fizz N' Fluff mascot" />
-        <div><p class="eyebrow">MAKE IT EXTRA</p><h3>Say “Fluff It!” ☁️</h3><p>Add sweet cream cold foam to any drink.</p></div>
-      </div>
+      <div class="fluff-banner reveal"><img src="assets/fluff-mascot.png" alt="Fluff pointing"><div><p class="eyebrow">FLUFF'S PICK</p><h3>Make it your own.</h3><p>Choose a base soda, add flavor, and finish it with a creamy twist.</p></div></div>
     </section>
 
-    <section class="section about-section" id="about">
-      <div class="about-card reveal">
-        <div class="about-copy">
-          <p class="eyebrow">ABOUT FIZZ N' FLUFF</p>
-          <h2>A little soda stand with a big personality.</h2>
-          <p>Fizz N' Fluff is a locally owned dirty soda pop-up serving handcrafted specialty sodas, creamy cold foam, and customizable drinks throughout the Mississippi Delta.</p>
-          <p>We are starting with pop-ups so we can bring colorful drinks, friendly service, and plenty of fun to community gatherings and local events.</p>
-        </div>
-        <div class="about-side">
-          <img src="assets/fizz-n-fluff-logo.png" alt="Fizz N' Fluff mascot" />
-          <div class="about-stats"><div><strong>100%</strong><span>Made to Order</span></div><div><strong>6+</strong><span>Launch Flavors</span></div><div><strong>1</strong><span>Signature Fluff</span></div></div>
-        </div>
-      </div>
+    <section class="section mascot-section" id="meet-fluff">
+      <div class="mascot-card reveal"><div class="mascot-copy"><p class="eyebrow">MEET THE MASCOT</p><h2>Meet Fluff. Chief Sip Officer.</h2><p>Fluff is the cheerful face of Fizz N' Fluff—always ready with a smile, a fizzy drink, and a little extra personality.</p><div class="fluff-facts"><span>Favorite job: Taste tester</span><span>Special skill: Making people smile</span><span>Catchphrase: Stay fizzy!</span></div></div><img src="assets/fluff-mascot.png" alt="Fluff, the official mascot of Fizz N' Fluff"></div>
     </section>
 
-    <section class="section why-section">
-      <div class="section-heading reveal"><p class="eyebrow">WHY FIZZ N' FLUFF?</p><h2>Fun drinks. Friendly service.</h2></div>
-      <div class="why-grid">
-        <article class="why-card reveal"><span>🥤</span><h3>Handcrafted Drinks</h3><p>Every drink is mixed fresh when you order.</p></article>
-        <article class="why-card reveal"><span>☁️</span><h3>Signature Cold Foam</h3><p>A creamy finishing touch that makes every sip extra fun.</p></article>
-        <article class="why-card reveal"><span>🎨</span><h3>Custom Flavors</h3><p>Mix flavors and add-ons to build a drink that feels like yours.</p></article>
-        <article class="why-card reveal"><span>😊</span><h3>Friendly Service</h3><p>We want every pop-up and event to feel welcoming and exciting.</p></article>
-      </div>
+    <section class="section events-section" id="events">
+      <img class="fluff-peek fluff-peek-left" src="assets/fluff-mascot.png" alt="" aria-hidden="true">
+      <div class="events-layout reveal"><div><p class="eyebrow">POP-UPS & PRIVATE EVENTS</p><h2>Bring the fizz to your celebration.</h2><p>After our opening pop-up, Fizz N' Fluff will be available for parties, school events, community gatherings, and other celebrations. Event totals will be based on the established number of guests.</p><a class="button button-dark" href="mailto:fizznfluffms@gmail.com?subject=Fizz%20N'%20Fluff%20Event%20Inquiry">Ask About an Event</a></div><div class="event-ticket"><img src="assets/fluff-mascot.png" alt="Fluff celebrating"><span>COMING SOON</span><h3>Grand Opening Pop-Up</h3><p>Date and location to be announced.</p><div class="ticket-line"></div><small>MISSISSIPPI DELTA • FIZZ N' FLUFF</small></div></div>
     </section>
 
-    <section class="section popups-section" id="popups">
-      <div class="popups-card reveal">
-        <div><p class="eyebrow">POP-UPS</p><h2>Catch us around the Delta.</h2><p>Our first pop-up is coming soon! Follow our Facebook page for the opening date, location, operating hours, limited-time drinks, and future pop-up announcements.</p><a class="button button-dark" href="https://www.facebook.com/fizznfluffms" target="_blank" rel="noopener noreferrer">Follow Our Launch</a></div>
-        <img src="assets/fizz-n-fluff-logo.png" alt="Fizz N' Fluff mascot" />
-      </div>
-    </section>
+    <section class="section about-section" id="about"><div class="about-card reveal"><div class="about-copy"><p class="eyebrow">ABOUT FIZZ N' FLUFF</p><h2>A small pop-up with a big personality.</h2><p>Fizz N' Fluff is a Mississippi Delta specialty soda business built around creative drinks, friendly service, and affordable fun.</p><p>We are beginning with a simple pop-up setup and growing one event, one customer, and one fizzy sip at a time.</p></div><div class="about-mascot"><img src="assets/fluff-mascot.png" alt="Fluff waving goodbye"><span>See you at the pop-up!</span></div></div></section>
 
-    <section class="section booking-section" id="book">
-      <div class="booking-head reveal">
-        <img src="assets/fizz-n-fluff-logo.png" alt="Fizz N' Fluff mascot" />
-        <div><p class="eyebrow">PRIVATE EVENTS — AFTER OUR OPENING</p><h2>Bring Fizz N' Fluff to your event!</h2><p>After we host our own opening, you'll be able to book us to serve handcrafted dirty sodas and signature cold foam at your celebration.</p></div>
-      </div>
-      <div class="event-types reveal">
-        <span>🎂 Birthday Parties</span><span>💒 Weddings</span><span>🏫 School Events</span><span>🏢 Business Events</span><span>🎪 Festivals</span><span>🎉 Community Events</span><span>🏈 Tailgates</span><span>🎄 Holiday Parties</span>
-      </div>
-      <div class="pricing-card reveal">
-        <div><p class="eyebrow">HOW EVENT PRICING WORKS</p><h3>Pricing is based on the number of guests.</h3><p>Once there is an established estimated guest count, we will put together the total cost for the event. Your custom quote will account for the drinks, supplies, and service needed for your group.</p><p class="booking-note">Event booking becomes available after our own opening. Dates are subject to availability.</p></div>
-        <a class="button button-orange" href="https://www.facebook.com/fizznfluffms" target="_blank" rel="noopener noreferrer">Request an Event Quote</a>
-      </div>
-    </section>
-
-    <section class="section mascot-section">
-      <div class="meet-card reveal"><div><p class="eyebrow">MEET THE MASCOT</p><h2>Meet Fluff!</h2><p>Fluff is the face of Fizz N' Fluff—always ready to serve smiles, point you toward something delicious, and bring a little extra fun to every pop-up.</p></div><img src="assets/fizz-n-fluff-logo.png" alt="Fluff, the Fizz N' Fluff mascot" /></div>
-    </section>
-
-    <section class="section faq-section" id="faq">
-      <div class="faq-layout">
-        <div class="faq-title reveal"><p class="eyebrow">FREQUENTLY ASKED QUESTIONS</p><h2>Got questions?</h2><img src="assets/fizz-n-fluff-logo.png" alt="Fizz N' Fluff mascot" /></div>
-        <div class="faq-list reveal">
-          <details><summary>Can I customize my drink?</summary><p>Yes! You can choose from available flavors, creamy add-ins, and cold foam options.</p></details>
-          <details><summary>When can I book Fizz N' Fluff for an event?</summary><p>Private event booking will begin after we hold our own opening.</p></details>
-          <details><summary>How does event pricing work?</summary><p>Pricing is based on the estimated number of guests. After the guest count is established, we will provide the total event quote.</p></details>
-          <details><summary>How do I request an event quote?</summary><p>Message the Fizz N' Fluff Facebook page with your date, location, event type, and estimated number of guests.</p></details>
-          <details><summary>Where will your first pop-up be?</summary><p>The first location and date will be announced on our Facebook page.</p></details>
-        </div>
-      </div>
-    </section>
-
-    <section class="follow-section" id="follow">
-      <div class="follow-inner reveal"><img src="assets/fizz-n-fluff-logo.png" alt="Fizz N' Fluff mascot waving goodbye" /><p class="eyebrow">DON'T MISS THE FIRST POUR</p><h2>Follow the Fizz N' Fluff journey.</h2><p>Facebook will be the first place we announce our opening, pop-up dates, special drinks, and event booking availability.</p><a class="button button-cream" href="https://www.facebook.com/fizznfluffms" target="_blank" rel="noopener noreferrer">Follow Us on Facebook</a></div>
-    </section>
+    <section class="follow-section" id="follow"><div class="follow-inner reveal"><img src="assets/fluff-mascot.png" alt="Fluff pointing toward the follow button"><div><p class="eyebrow">DON'T MISS THE FIRST POUR</p><h2>Follow the Fizz N' Fluff journey.</h2><p>Facebook will be the first place we announce pop-up dates, locations, menu updates, and opening specials.</p><a class="button button-cream" href="https://www.facebook.com/fizznfluffms" target="_blank" rel="noopener noreferrer">Follow Us on Facebook</a></div></div></section>
   </main>
 
-  <footer>
-    <a class="brand footer-brand" href="#top"><img class="brand-logo" src="assets/fizz-n-fluff-logo.png" alt="" /><span>Fizz N' Fluff</span></a>
-    <p>Dirty sodas, cold foam, and good vibes in the Mississippi Delta.</p>
-    <p class="copyright">© <span id="year"></span> Fizz N' Fluff. All rights reserved.</p>
-  </footer>
-
-  <div class="confetti-layer" aria-hidden="true"></div>
+  <footer><a class="footer-logo" href="#top"><img src="assets/fizz-n-fluff-logo.svg" alt="Fizz N' Fluff"></a><p>Dirty sodas and good vibes in the Mississippi Delta.</p><p class="copyright">© <span id="year"></span> Fizz N' Fluff.</p></footer>
   <script src="script.js"></script>
 </body>
 </html>
